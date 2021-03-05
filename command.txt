@@ -1,0 +1,89 @@
+Web is a normal folder
+inside Web, created virtual env - conda create --prefix ./first python=3.7
+in default env location (conda create -n <name> python=x.x)
+to remove (conda remove -n <name> -all)
+
+conda activate ./first
+
+(in Web folder - one virtual environment "first", projects is a folder for django project)
+(don't mess with first folder, it is virtualenv folder)
+
+pip install django
+
+now i am inside projects folder
+
+django-admin startproject <roject-name>
+
+python manage.py runserver
+
+python manage.py startapp calc (created calc app in "bharat" project)
+
+---
+missed one commmand to move all the static items to asset(can be any) folder
+---
+use postgresql and pgadmin(to visualize postgresql database)
+pip install psycopg2 (postgresql connector for python)
+pip install Pillow (for handling image)
+---
+
+we have to migrate models to the database to create a tables
+python manage.py makemigrations
+python manage.py sqlmigrate travello 0001 (will give sql which will be executed based on migration file created)
+python manage.py migrate (to migrate) (check in pgadmin to verify)
+
+
+python manage.py help
+python manage.py createsuperuser (admin/maharshi097/bharatvaghela0097@gmail.com)
+
+
+------
+to load static content in template
+{% load static %}
+
+
+
+--------------
+leaflet
+
+pip install django-leaflet
+
+
+
+----------------
+postgresql
+
+to start -> psql (with specific user -> psql -U postgres   (admin123 is pwd))
+
+\l - list all db
+\dt - list database tables
+\c test1 (connect to test1 db)
+\q - quit
+
+
+\c test_gis
+CREATE EXTENSION postgis;
+CREATE EXTENSION postgis_raster;
+
+
+
+------------------
+python anywhere (0097)
+
+git clone https://github.com/Bharat097/teashop.git
+
+mkvirtualenv --python=/usr/bin/python3.8 myenv
+pip install django
+
+Host:(Bharat097.pythonanywhere.com)
+Web -> 
+
+---------------------------------------
+
+git config --local user.email bharatvaghela097@gmail.com
+git config --local user.name bharat097
+
+git config --local --list
+
+git push --set-upstream origin create_app
+
+---------------------------------------

@@ -1,0 +1,19 @@
+to start -> mongo
+compass -> for viewing mongodb
+
+port: 27017
+
+by default mongodb stores file in C:data\db folder (if folder is not present, we need to create it)
+
+----
+
+conn = pymongo.MongoClient("localhost", 27017)
+
+mydb = conn["db_name"] => if db_name database does not exist, then it will create ow uses existing db
+(empty database is not allowed in mongodb - add collection(table in rdbms) in db)
+
+collection = mydb["my_coll_1"]
+(we need to add something in collection (document))
+
+data = {"name": "bharat"}
+collection.insert_one(data)
