@@ -87,3 +87,7 @@ git config --local --list
 git push --set-upstream origin create_app
 
 ---------------------------------------
+
+git remote add my-repo .git/
+git push --set-upstream my-repo master
+git push
